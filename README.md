@@ -4,4 +4,4 @@ A fully functional HTML/CSS/Pure JavaScript Wordle clone that I created in one a
 
 ![Base Game State](https://i.imgur.com/TKlkwPI.png)
 
-![A Few Guess In](https://i.imgur.com/xaZ9ZFV.png)
+![A Few Guess In](https://i.imgur.com/UmmPjrw.png)
