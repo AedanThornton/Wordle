@@ -41,7 +41,7 @@ h4 {
     color: white;
     font-size: 3rem;
     text-align: center;
-    line-height: 5.5rem;
+    line-height: 4.2rem;
 }
 
 .overlay {
@@ -82,22 +82,6 @@ h4 {
     border: none;
 }
 
-.pressed {
-    background-color: gray;
-}
-
-.partially-correct {
-    background-color: goldenrod;
-}
-
-.correct {
-    background-color: green;
-}
-
-.failure {
-    background-color: red;
-}
-
 .keyboard {
     display: flex;
     flex-wrap: wrap;
@@ -114,8 +98,31 @@ h4 {
     border-radius: 7px;
     border: none;
     font-weight: 600;
+    background-color: rgb(133, 133, 133);
+    color: white;
 }
 
 .key.wide {
     width: 4rem;
+}
+
+.incorrect {
+    background-color: rgb(80, 80, 80);
+    color: white;
+}
+
+.partially-correct {
+    background-color: goldenrod;
+}
+
+.correct {
+    background-color: green;
+}
+
+.failure {
+    background-color: red;
+}
+
+.pressed {
+    background-color: gray;
 }

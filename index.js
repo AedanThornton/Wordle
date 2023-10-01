@@ -22,6 +22,9 @@ function compareLetterToAnswer(letterBox, pos) {
     let letterPos = answer.toUpperCase().indexOf(letterBox.text().toUpperCase());
 
     if (letterPos === -1){
+        $(".key").filter(function() {
+            return $(this).text().toUpperCase() === letterBox.text().toUpperCase();
+        }).addClass("incorrect");
         return;
     }
 
@@ -37,8 +40,8 @@ function compareLetterToAnswer(letterBox, pos) {
         }).addClass("partially-correct");
     }
 
-    let answer2 = answer.split("");
-    answer2[letterPos] = "/";
+    let answer2 = answer.split(""); //replace checked letter with non-letter
+    answer2[letterPos] = "/";       //to avoid double checking it
     answer = answer2.join("");
 
     return letterBox.text();
@@ -136,7 +139,8 @@ async function gameInit() {
     currentGuessNumber = 0;
     $(".overlay").css("display", "none");
     $("body").removeClass("failure correct");
-    $(".letter").removeClass("correct partially-correct").text("");
+    $(".letter").removeClass("correct partially-correct incorrect").text("");
+    $(".key").removeClass("correct partially-correct incorrect");
     
     originalAnswer = await pickRandomWord();
 
